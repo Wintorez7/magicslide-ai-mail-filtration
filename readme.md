@@ -74,7 +74,7 @@ Built with **Next.js 15**, **TypeScript**, **TailwindCSS**, and **ShadCN UI** â€
 
 Clone the repository:
 
-git clone https://github.com/yourusername/magicslide-ai-classifier.git
+git clone https://github.com/Wintorez7/magicslide-ai-mail-filtration.git
 cd magicslide-ai-classifier
 
 
