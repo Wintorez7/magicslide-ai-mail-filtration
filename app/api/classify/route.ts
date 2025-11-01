@@ -27,11 +27,11 @@ export async function POST(req: Request) {
       const batch = emails.slice(i, i + batchSize);
       
       const formattedEmails = batch.map((e, idx) => `
-Email #${idx + 1}
-From: ${e.sender}
-Subject: ${e.subject}
-Preview: ${e.snippet}
-`).join("\n---\n");
+      Email #${idx + 1}
+      From: ${e.sender}
+      Subject: ${e.subject}
+      Preview: ${e.snippet}
+      `).join("\n---\n");
 
       const res = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST",
