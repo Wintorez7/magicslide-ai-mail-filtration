@@ -46,20 +46,20 @@ export async function POST(req: Request) {
               role: "system",
               content: `You are an email classifier. Categorize emails into EXACTLY one of these categories:
 
-**important** - Personal emails, work communications, bills, receipts, account notifications, password resets, shipping updates, calendar invites, direct replies to user
-**marketing** - Newsletters, promotional offers, sales announcements, product updates, company blogs, event invitations from brands
-**spam** - Suspicious links, phishing attempts, fake prizes, unknown senders with weird requests, scams
-**advertising** - Cold sales emails, affiliate promotions, sponsored content, ads for services/products you didn't sign up for
+            **important** - Personal emails, work communications, bills, receipts, account notifications, password resets, shipping updates, calendar invites, direct replies to user
+            **marketing** - Newsletters, promotional offers, sales announcements, product updates, company blogs, event invitations from brands
+            **spam** - Suspicious links, phishing attempts, fake prizes, unknown senders with weird requests, scams
+            **advertising** - Cold sales emails, affiliate promotions, sponsored content, ads for services/products you didn't sign up for
 
-RULES:
-- Transactional emails (receipts, confirmations, shipping) = important
-- Brand newsletters you subscribed to = marketing  
-- Unsolicited sales pitches = advertising
-- Suspicious/malicious = spam
-- When unsure between marketing/advertising, choose marketing if from a known brand
+            RULES:
+            - Transactional emails (receipts, confirmations, shipping) = important
+            - Brand newsletters you subscribed to = marketing  
+            - Unsolicited sales pitches = advertising
+            - Suspicious/malicious = spam
+            - When unsure between marketing/advertising, choose marketing if from a known brand
 
-Return ONLY valid JSON array: [{"index":1,"category":"important"},{"index":2,"category":"spam"}]
-No explanations, no extra text.`
+            Return ONLY valid JSON array: [{"index":1,"category":"important"},{"index":2,"category":"spam"}]
+            No explanations, no extra text.`
             },
             { role: "user", content: formattedEmails }
           ],
