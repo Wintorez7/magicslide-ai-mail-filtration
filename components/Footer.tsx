@@ -1,6 +1,7 @@
 "use client";
 
 import { Mail } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -42,8 +43,15 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Legal & Support</h3>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li><a href="#" className="hover:text-blue-600 transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-blue-600 transition-colors">Terms of Use</a></li>
+              <li>
+                <Link href={'/privacy'}>
+                  <p className="hover:text-blue-600 transition-colors">Privacy Policy</p>
+                </Link>
+              </li><li>
+                <Link href={'/terms'}>
+                  <p className="hover:text-blue-600 transition-colors">Terms of Use</p>
+                </Link>
+              </li>
               <li><a href="#" className="hover:text-blue-600 transition-colors">Contact Support</a></li>
               <li><a href="#" className="hover:text-blue-600 transition-colors">FAQ and Help Center</a></li>
             </ul>
